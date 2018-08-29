@@ -2,11 +2,11 @@ package com.mydomain.coding;
 
 import org.springframework.aop.AfterReturningAdvice;
 import org.springframework.aop.MethodBeforeAdvice;
-import org.springframework.cglib.proxy.MethodInterceptor;
-import org.springframework.cglib.proxy.MethodProxy;
+import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Method;
 
+@Service("taskManagerTimeSpanAdvice")
 public class TaskManagerTimeSpanAdvice implements MethodBeforeAdvice, AfterReturningAdvice {
     @Override
     public void before(Method method, Object[] objects, Object o) throws Throwable {
